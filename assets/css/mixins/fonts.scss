@@ -1,0 +1,18 @@
+@mixin font-family {
+  font-family: Inter, sans-serif;
+}
+
+@mixin txt-400 {
+  @include font-family;
+  font-weight: 400;
+}
+
+@mixin txt-500 {
+  @include font-family;
+  font-weight: 500;
+}
+
+@mixin txt-700 {
+  @include font-family;
+  font-weight: 700;
+}

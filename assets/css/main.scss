@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nuxt-icon svg {
+  color: #{$black-100};
+  transition: color 0.3s;
+}
+
+.dark-mode .nuxt-icon svg {
+  color: #{$white-100};
+}
