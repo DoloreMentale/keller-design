@@ -14,3 +14,18 @@ html, body {
 .dark-mode .nuxt-icon svg {
   color: #{$white-100};
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration:none;
+  cursor:pointer;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+}

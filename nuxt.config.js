@@ -1,13 +1,16 @@
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/main.scss'],
   buildModules: ['@nuxtjs/google-fonts'],
-  modules: ['@nuxtjs/color-mode', 'nuxt-icons'],
+  modules: ['@nuxtjs/color-mode', 'nuxt-icons', '@nuxtjs/device'],
   googleFonts: {
     families: {
-      Inter: {
-        wght: [400, 500, 700]
-      }
+      Inter: [400, 500, 600, 700]
     }
   },
   vite: {
@@ -17,6 +20,7 @@ export default defineNuxtConfig({
           additionalData: `
             @import "~/assets/css/mixins/fonts.scss";
             @import "~/assets/css/variables/colors.scss";
+            @import "~/assets/css/variables/breakpoints.scss";
           `
         }
       }
