@@ -1,17 +1,15 @@
 <script setup>
 import PortfolioListItem from "./portfolio-list-item.vue";
 import portfolios from "~/enums/portfolios";
-
-const portfoliosList =  ref(portfolios);
 </script>
 
 <template>
   <template v-for="(item, index) in portfolios" :key="index">
-    <p v-if="!index" class="portfolio-list__text-divider">В настоящее время</p>
+    <p v-if="!index" class="portfolio-list__text-divider">{{ $t('currently') }}</p>
 
-    <PortfolioListItem  :item="item" />
+    <PortfolioListItem :item="item" />
 
-    <p v-if="!index" class="portfolio-list__text-divider">Ранее</p>
+    <p v-if="!index" class="portfolio-list__text-divider">{{ $t('before') }}</p>
   </template>
 </template>
 
@@ -20,20 +18,17 @@ const portfoliosList =  ref(portfolios);
   &__text-divider {
     @include txt-400;
 
-    @media screen and (max-width: $mobile) {
-      font-size: 12px;
+    font-size: 12px;
+    margin: 24px 0;
+
+    @include mobile-up {
+      font-size: 16px;
+      margin: 64px 0;
     }
 
-    font-size: 16px;
     color: #{$white-500};
 
     text-align: center;
-
-    @media screen and (max-width: $mobile) {
-      margin: 24px 0;
-    }
-
-    margin: 64px 0;
   }
 }
 </style>

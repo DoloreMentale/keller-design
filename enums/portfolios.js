@@ -1,9 +1,14 @@
 export default [
   {
     title: 'Crypto wallet app',
-    description: 'Тимлид продуктового отдела дизайна в AlfaBit, <br> Московском финтех-стартапе, который ведёт разработку собственных IT-продуктов в сфере цифровой экономики. <br><br> Основной мой продукт — это приложение некастодиального криптокошелька.',
+    description: 'projects.wallet',
     imgs: ['/portfolios/crypto-wallet-app.png'],
     links: [
+      {
+        title: 'app',
+        disabled: true,
+        description: 'for_ios',
+      },
       {
         title: 'Behance',
         description: 'О проекте',
@@ -20,7 +25,7 @@ export default [
   },
   {
     title: 'Crypto exchange',
-    description: 'Тимлид продуктового отдела дизайна в AlfaBit.<br><br> Основная деятельность заключалась в доработке и улучшении основного продукта компании - криптовалютный обменник.',
+    description: 'projects.exchange',
     imgs: ['/portfolios/crypto-exchange.png'],
     links: [
       {
@@ -39,7 +44,7 @@ export default [
   },
   {
     title: 'Reborn game',
-    description: 'Продуктовый дизайнер в Испанской компании, занимающей топ 1 в Европе среди серверов по ММО Lineage 2',
+    description: 'projects.reborn',
     imgs: ['/portfolios/reborn-game-1.png', '/portfolios/reborn-game-2.png'],
     links: [
       {

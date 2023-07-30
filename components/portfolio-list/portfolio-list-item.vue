@@ -1,20 +1,27 @@
 <template>
   <div class="portfolio-list__item">
-    <p class="portfolio-list__item__title">{{ item.title }}</p>
+    <h1 class="portfolio-list__item__title">{{ item.title }}</h1>
 
-    <p class="portfolio-list__item__description" v-html="item.description" />
+    <p class="portfolio-list__item__description">{{ $t(item.description) }}</p>
 
     <template v-for="(img, imgIndex) in item.imgs" :key="imgIndex">
       <img class="portfolio-list__item__img" :src="img" loading="lazy" alt="portfolio-item-img" />
     </template>
 
     <div class="portfolio-list__item__links">
-      <a v-for="(link, linkIndex) in item.links" :key="linkIndex" :href="link.link" target="_blank" :class="{ 'portfolio-list__item__links__item--disabled': !link.link }">
+      <a
+        v-for="(link, linkIndex) in item.links"
+        :key="linkIndex"
+        :href="link.link"
+        target="_blank"
+        :class="{ 'portfolio-list__item__links__item--disabled': !link.link }"
+        :style="`grid-area: ${linkIndex + 1}`"
+      >
         <div class="portfolio-list__item__links__item">
           <nuxt-icon v-if="link.icon" :name="link.icon" />
 
           <div>
-            <p class="portfolio-list__item__links__item__title">{{ link.title }}</p>
+            <h1 class="portfolio-list__item__links__item__title">{{ link.title }}</h1>
 
             <p class="portfolio-list__item__links__item__description">{{ link.description }}</p>
           </div>
@@ -38,41 +45,35 @@ const props = defineProps({
   &__item {
     border-radius: 24px;
 
-    @media screen and (max-width: $mobile) {
-      margin: 24px 0;
-    }
-
-    margin: 64px 0;
-    padding: 60px 52px;
+    padding: 24px;
 
     background-color: #{$white-200};
     transition: background-color 0.3s;
 
     &__title {
       @include txt-700;
+      font-size: 24px;
 
-      @media screen and (max-width: $mobile) {
-        font-size: 24px;
+      @include mobile-up {
+        font-size: 32px;
       }
-
-      font-size: 32px;
       margin: 0 0 16px 0;
 
       color: #{$black-100};
-    }
 
-    .dark-mode &__title {
-      color: #{$white-100};
+      .dark-mode & {
+        color: #{$white-100};
+      }
     }
-
     &__description {
       @include txt-400;
 
-      @media screen and (max-width: $mobile) {
-        font-size: 15px;
-      }
+      font-size: 15px;
+      white-space: pre-wrap;
 
-      font-size: 24px;
+      @include mobile-up {
+        font-size: 24px;
+      }
     }
 
     .dark-mode &__description {
@@ -80,27 +81,34 @@ const props = defineProps({
     }
 
     &__img {
-      display: flex;
-      margin: 60px auto;
+      display: block;
+      margin: 24px auto;
+
       border-radius: 24px;
     }
 
     &__links {
       display: grid;
 
-      @media screen and (max-width: $mobile) {
-        grid-template-columns: repeat(1, 1fr);
-      }
+      grid-template-areas:
+        "1 2"
+        "3 3";
+      grid-template-columns: repeat(2, 1fr);
 
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 24px;
-      grid-row-gap: 24px;
+      //@include mobile-only {
+      //  grid-template-columns: 1fr;
+      //}
+
+      //grid-template-columns: repeat(3, 1fr);
+      gap: 24px 16px;
+      //grid-column-gap: 24px;
+      //grid-row-gap: 24px;
 
       &__item {
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: $mobile) {
+        @include mobile-only {
           justify-content: center;
         }
 

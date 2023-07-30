@@ -1,0 +1,39 @@
+@use '../variables/breakpoints';
+
+@mixin media-max($max) {
+  @media screen and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-min($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+@mixin media-min-max($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @include media-max(breakpoints.$tablet - 1) { @content };
+}
+
+@mixin mobile-up {
+  @include media-min(breakpoints.$tablet) { @content };
+}
+
+@mixin tablet-only {
+  @include media-min-max(breakpoints.$tablet, breakpoints.$desktop - 1) { @content };
+}
+
+@mixin desktop-only {
+  @include media-min(breakpoints.$desktop) { @content };
+}
+
+@mixin to-desktop {
+  @include media-max(breakpoints.$desktop - 1) { @content };
+}

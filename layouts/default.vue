@@ -1,12 +1,10 @@
-<script setup>
-</script>
-
 <template>
   <div class="layout" id="app-layout">
-    <div class="layout__container">
-      <Navbar />
+    <Navbar />
 
-      <div class="layout__container__content">
+    <div class="layout__container">
+
+      <div class="layout__content">
         <slot />
       </div>
 
@@ -20,28 +18,12 @@
   width: 100%;
   min-height: 100vh;
 
-  background-color: #{$white-100};
-  transition: background-color 0.3s;
-
   &__container {
-    @media screen and (max-width: $mobile) {
-      padding: 24px;
-    }
-
-    padding: 40px 60px;
-
-    &__content {
-      @media screen and (max-width: $mobile) {
-        margin-top: 33px;
-      }
-
-      margin: 127px auto 80px auto;
-      max-width: 700px;
-    }
+    padding: 24px;
   }
-}
 
-.dark-mode .layout {
-  background-color: #{$black-100};
+  &__content {
+    max-width: 700px;
+  }
 }
 </style>

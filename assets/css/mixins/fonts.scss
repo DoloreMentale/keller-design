@@ -1,4 +1,7 @@
+@use 'media' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 @mixin font-family {
   font-family: Inter, sans-serif;
@@ -29,4 +32,29 @@
 @mixin txt-700 {
   @include font-family;
   font-weight: 700;
+}
+
+body {
+  @include font-family;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+
+  @include mobile-up {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+body {
+  font-size: 16px;
+  line-height: 19px;
+
+  @include mobile-up {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }

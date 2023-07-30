@@ -1,6 +1,8 @@
 <script setup>
+import HeaderLogo from './header-logo.vue';
+import LangSwitch from './lang-switch.vue';
+
 const colorMode = useColorMode();
-const { isMobile } = useDevice();
 
 const socials = ref([
   {
@@ -18,103 +20,115 @@ const socials = ref([
 ]);
 
 const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.preference = 'light' : colorMode.preference = 'dark';
+
 </script>
 
 <template>
 <div class="navbar">
   <div class="navbar__main">
-    <nuxt-icon class="navbar__main__logo" :name="isMobile ? 'logo-mobile' : 'logo'" />
+    <header-logo />
 
     <div class="navbar__main__divider" />
 
-    <a v-for="(social, index) in socials" :key="index" class="navbar__main__social" :href="social.link" target="_blank">
+    <a v-for="(social, index) in socials" :key="index" class="navbar__main__social navbar__control" :href="social.link" target="_blank">
       <nuxt-icon :name="social.icon" />
     </a>
   </div>
 
-  <div class="navbar__extra">
-    <nuxt-icon class="navbar__extra__theme" name="theme" @click="switchColorMode" />
-
-    <nuxt-icon class="navbar__extra__lang" name="lang" />
+  <div class="navbar__controls">
+    <nuxt-icon class="navbar__control" name="theme" @click="switchColorMode()" />
+    <lang-switch class="navbar__control" />
   </div>
 </div>
 </template>
 
 <style lang="scss" scoped>
 .navbar {
-  // position: fixed;
+  padding: 10px 16px;
+
   width: 100%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  position: sticky;
+  top: 0;
+
+  background: #{$white-100};
+
+  transition: background 0.3s;
+
+  .dark-mode & {
+    background: #{$black-100};
+  }
+
   &__main {
-    display: inherit;
-    align-items: inherit;
-
-    &__logo {
-      ::v-deep(svg) {
-        @media screen and (max-width: $mobile) {
-          height: 45px;
-          width: min-content;
-        }
-
-        width: 122px;
-        height: 45px;
-      }
-    }
+    display: flex;
+    align-items: center;
 
     &__divider {
+      align-self: center;
+
       width: 1px;
       height: 14px;
 
-      @media screen and (max-width: $mobile) {
-        margin: 0 16px;
+      margin: 0 16px;
+
+      @include mobile-up {
+        margin: 0 40px;
       }
 
-      margin: 0 40px;
       background-color: #{$white-500};
     }
+  }
 
-    &__social {
-      ::v-deep(svg) {
-        cursor: pointer;
+  &__controls {
+    display: flex;
+    align-items: center;
+  }
 
-        width: 22px;
-        height: 22px;
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        margin: 0 12px;
-      }
+    width: 38px;
+    height: 38px;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    :deep(svg) {
+
     }
   }
 
-  &__extra {
-    display: inherit;
-    align-items: inherit;
-    // margin-right: 120px;
+  //&__controls {
+  //  display: flex;
+  //  align-items: center;
+  //
+  //  &__theme {
+  //    ::v-deep(svg) {
+  //      cursor: pointer;
+  //
+  //      width: 20px;
+  //      height: 20px;
+  //
+  //      margin: 0 12px;
+  //    }
+  //  }
 
-    &__theme {
-      ::v-deep(svg) {
-        cursor: pointer;
-
-        width: 20px;
-        height: 20px;
-
-        margin: 0 12px;
-      }
-    }
-
-    &__lang {
-      ::v-deep(svg) {
-        cursor: pointer;
-
-        width: 20px;
-        height: 20px;
-
-        margin-left: 12px;
-      }
-    }
-  }
+    //&__lang {
+    //  ::v-deep(svg) {
+    //    cursor: pointer;
+    //
+    //    width: 20px;
+    //    height: 20px;
+    //
+    //    margin-left: 12px;
+    //  }
+    //}
 }
 </style>

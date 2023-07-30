@@ -1,0 +1,12 @@
+{
+  "experience_description": "Product designer. 11 years in design,\n4 years in product development. I specialize in fintech solutions",
+  "currently": "Currently",
+  "before": "Before",
+  "about_company": "About company",
+  "about_project": "More details",
+  "projects": {
+    "wallet": "I am the team leader of the design department at AlfaBit, a Moscow based fintech startup that develops its own IT products in the digital economy.\n\nMy main product is a non-custodial crypto wallet app.",
+    "exchange": "Getting started as a product designer at AlfaBit.\n\nThe main activity was to refine and improve the main product of the company — cryptocurrency exchange",
+    "reborn": "A product designer in a Spanish company\nthat occupies the top 1 in Europe among MMO Lineage 2 servers"
+  }
+}
