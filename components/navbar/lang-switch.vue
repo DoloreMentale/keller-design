@@ -95,7 +95,7 @@ const setLocale = (loc) => {
   }
 
   &__option {
-    font-size: 9px;
+    font-size: 12px;
     color: #{$black-100};
 
     &--disabled {
