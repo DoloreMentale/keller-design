@@ -14,10 +14,6 @@ const toggleLocale = () => {
 
 <style lang="scss" scoped>
 .lang-switch {
-  outline: none;
-  background: transparent;
-  border: none;
-
   @include txt-700;
 
   font-family: Montserrat, sans-serif;

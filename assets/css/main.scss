@@ -22,6 +22,14 @@ h1, h2, h3, h4, h5, h6, p {
   box-sizing: border-box;
 }
 
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .nuxt-icon {
   color: #{$black-100};
 
