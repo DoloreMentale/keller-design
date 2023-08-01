@@ -8,22 +8,24 @@
       <img class="portfolio-list__item__img" :src="img" loading="lazy" alt="portfolio-item-img" />
     </template>
 
-    <div class="portfolio-list__item__links">
+    <div :class="[
+        'portfolio-list__item__links',
+        { 'portfolio-list__item__links--triple': item.links.length > 2 }
+    ]">
       <a
         v-for="(link, linkIndex) in item.links"
         :key="linkIndex"
         :href="link.link"
         target="_blank"
-        :class="{ 'portfolio-list__item__links__item--disabled': !link.link }"
-        :style="`grid-area: ${linkIndex + 1}`"
+        :style="{ 'grid-area': item.links.length > 2 ? `col-${linkIndex + 1}` : undefined }"
       >
-        <div class="portfolio-list__item__links__item">
+        <div :class="['portfolio-list__item__links__item', { 'portfolio-list__item__links__item--disabled': !link.link }]">
           <nuxt-icon v-if="link.icon" :name="link.icon" />
 
-          <div>
-            <h1 class="portfolio-list__item__links__item__title">{{ link.title }}</h1>
+          <div class="portfolio-list__item__links__item__wrapper">
+            <span class="portfolio-list__item__links__item__title">{{ $t(link.title) }}</span>
 
-            <p class="portfolio-list__item__links__item__description">{{ link.description }}</p>
+            <p class="portfolio-list__item__links__item__description">{{ $t(link.description) }}</p>
           </div>
         </div>
       </a>
@@ -47,8 +49,12 @@ const props = defineProps({
 
     padding: 24px;
 
-    background-color: #{$white-200};
-    transition: background-color 0.3s;
+    background: #{$white-200};
+    transition: background 0.3s;
+
+    &:not(:first-child) {
+      margin-bottom: 24px;
+    }
 
     &__title {
       @include txt-700;
@@ -74,10 +80,10 @@ const props = defineProps({
       @include mobile-up {
         font-size: 24px;
       }
-    }
 
-    .dark-mode &__description {
-      color: #{$white-100};
+      .dark-mode & {
+        color: #{$white-100};
+      }
     }
 
     &__img {
@@ -90,33 +96,39 @@ const props = defineProps({
     &__links {
       display: grid;
 
-      grid-template-areas:
-        "1 2"
-        "3 3";
-      grid-template-columns: repeat(2, 1fr);
+      &--triple {
+        grid-template-areas:
+        "col-1 col-2"
+        "col-3 col-3";
 
-      //@include mobile-only {
-      //  grid-template-columns: 1fr;
-      //}
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-      //grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: unset;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+
       gap: 24px 16px;
-      //grid-column-gap: 24px;
-      //grid-row-gap: 24px;
 
       &__item {
+        $self: &;
+
         display: flex;
         align-items: center;
+
+        &__wrapper {
+          margin-left: 8px;
+        }
 
         @include mobile-only {
           justify-content: center;
         }
 
-        padding: 12px;
+        padding: 12px 10px;
         border-radius: 14px;
 
-        background-color: #{$white-300};
-        transition: background-color 0.3s;
+        background: #{$white-300};
+        transition: background 0.3s;
 
         ::v-deep(svg) {
           cursor: pointer;
@@ -133,10 +145,10 @@ const props = defineProps({
           color: #{$black-100};
 
           margin: 0 0 5px 0;
-        }
 
-        .dark-mode &__title {
-          color: #{$white-100};
+          .dark-mode & {
+            color: #{$white-100};
+          }
         }
 
         &__description {
@@ -145,26 +157,38 @@ const props = defineProps({
           color: #{$black-100};
 
           margin: 0;
-        }
 
-        .dark-mode &__description {
-          color: #{$white-100};
+          .dark-mode & {
+            color: #{$white-100};
+          }
         }
 
         &--disabled {
-          opacity: 0.4;
           pointer-events: none;
+          background: rgba($white-300, 0.4) !important;
+
+          & .nuxt-icon, #{$self}__title, #{$self}__description {
+            color: rgba($black-100, 0.4) !important;
+          }
+
+          .dark-mode & {
+            background: rgba($black-100, 0.4) !important;
+
+            & .nuxt-icon, #{$self}__title, #{$self}__description {
+              color: rgba($white-300, 0.4) !important;
+            }
+          }
+        }
+
+        .dark-mode & {
+          background: #{$black-100};
         }
       }
-
-      .dark-mode  &__item {
-        background-color: #{$black-100};
-      }
     }
-  }
 
-  .dark-mode &__item {
-    background-color: #{$black-200};
+    .dark-mode & {
+      background: #{$black-200};
+    }
   }
 }
 </style>

@@ -22,18 +22,20 @@ h1, h2, h3, h4, h5, h6, p {
   box-sizing: border-box;
 }
 
+.nuxt-icon {
+  color: #{$black-100};
+
+  transition: color 0.3s;
+
+  .dark-mode & {
+    color: #{$white-100};
+  }
+}
+
 .nuxt-icon svg {
   width: auto !important;
   height: auto !important;
-
   margin: 0 !important;
-
-  color: #{$black-100};
-  transition: color 0.3s;
-}
-
-.dark-mode .nuxt-icon svg {
-  color: #{$white-100};
 }
 
 a {

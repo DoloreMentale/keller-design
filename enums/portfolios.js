@@ -6,19 +6,19 @@ export default [
     links: [
       {
         title: 'app',
-        disabled: true,
+        icon: 'ios',
         description: 'for_ios',
       },
       {
-        title: 'Behance',
-        description: 'О проекте',
-        icon: 'socials/behance',
-        link: '',
-      },
-      {
-        title: 'О AlfaBit Wallet',
+        title: 'about_company',
         description: 'AlfaBit.org',
         icon: 'companies/alfabit',
+        link: 'https://alfabit.org/',
+      },
+      {
+        title: 'Behance',
+        description: 'about_project',
+        icon: 'socials/behance',
         link: 'https://alfabit.org/ru/wallet',
       },
     ],
@@ -30,12 +30,12 @@ export default [
     links: [
       {
         title: 'Behance',
-        description: 'О проекте',
+        description: 'about_project',
         icon: 'socials/behance',
         link: '',
       },
       {
-        title: 'О AlfaBit Exchange',
+        title: 'about_company',
         description: 'AlfaBit.org',
         icon: 'companies/alfabit',
         link: 'https://alfabit.org/',
@@ -49,12 +49,12 @@ export default [
     links: [
       {
         title: 'Behance',
-        description: 'О проекте',
+        description: 'about_project',
         icon: 'socials/behance',
         link: '',
       },
       {
-        title: 'Сайт',
+        title: 'about_company',
         description: 'l2reborn.org',
         icon: 'companies/reborn',
         link: 'https://l2reborn.org/',
