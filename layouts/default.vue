@@ -55,9 +55,36 @@ const up = () => {
 
   &__arrow-up {
     position: fixed;
+    border-radius: 14px;
+    background: #{$white-100};
 
-    top: 50%;
-    bottom: 50%;
+    transition: background 0.3s;
+
+    .dark-mode & {
+      background: #{$black-100};
+
+      &:hover, &:active {
+        background: #{$black-200};
+      }
+    }
+
+    &:hover {
+      background: #{$white-200};
+    }
+
+    &:active {
+      background: #{$white-300};
+
+      & .nuxt-icon {
+        color: #{$red-200};
+      }
+    }
+
+    @include tablet-only {
+      right: 8px;
+    }
+
+    bottom: 8px;
     right: 60px;
   }
 }

@@ -44,6 +44,8 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
 
 <style lang="scss" scoped>
 .navbar {
+  z-index: 1;
+
   padding: 10px 16px;
 
   width: 100%;
@@ -60,8 +62,11 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
   transition: background 0.3s;
 
   @include mobile-up {
-    position: relative;
     padding: 40px 60px;
+  }
+
+  @include desktop-only {
+    position: relative;
   }
 
   .dark-mode & {
@@ -104,6 +109,18 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
     padding: 8px;
 
     cursor: pointer;
+
+    &:hover {
+      &, .nuxt-icon {
+        color: #{$red-200};
+      }
+    }
+
+    &:active {
+      &, .nuxt-icon {
+        color: #{$red-100};
+      }
+    }
 
     &:not(:last-child) {
       margin-right: 4px;

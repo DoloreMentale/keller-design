@@ -3,6 +3,7 @@ export default [
     title: 'Crypto wallet app',
     description: 'projects.wallet',
     imgs: ['/portfolios/crypto-wallet-app.png'],
+    hover_imgs: ['/portfolios/crypto-wallet-app-hover.png'],
     links: [
       {
         title: 'app',
@@ -19,7 +20,6 @@ export default [
         title: 'Behance',
         description: 'about_project',
         icon: 'socials/behance',
-        link: 'https://alfabit.org/ru/wallet',
       },
     ],
   },
@@ -27,6 +27,7 @@ export default [
     title: 'Crypto exchange',
     description: 'projects.exchange',
     imgs: ['/portfolios/crypto-exchange.png'],
+    hover_imgs: ['/portfolios/crypto-exchange-hover.png'],
     links: [
       {
         title: 'Behance',
@@ -46,6 +47,7 @@ export default [
     title: 'Reborn game',
     description: 'projects.reborn',
     imgs: ['/portfolios/reborn-game-1.png', '/portfolios/reborn-game-2.png'],
+    hover_imgs: ['/portfolios/reborn-hover-1.png', '/portfolios/reborn-hover-2.png'],
     links: [
       {
         title: 'Behance',

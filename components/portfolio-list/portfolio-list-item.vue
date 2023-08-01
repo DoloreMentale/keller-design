@@ -4,9 +4,13 @@
 
     <p class="portfolio-list__item__description">{{ $t(item.description) }}</p>
 
-    <template v-for="(img, imgIndex) in item.imgs" :key="imgIndex">
-      <img class="portfolio-list__item__img" :src="img" loading="lazy" alt="portfolio-item-img" />
-    </template>
+    <fading-img
+      class="portfolio-list__item__img"
+      v-for="(img, imgIndex) in item.imgs"
+      :key="imgIndex"
+      :src="img"
+      :src-hover="item.hover_imgs[imgIndex]"
+    />
 
     <div :class="[
         'portfolio-list__item__links',
@@ -156,6 +160,22 @@ const props = defineProps({
 
         background: #{$white-300};
         transition: background 0.3s;
+
+        &:hover {
+          background: #{$white-400};
+
+          .dark-mode & {
+            background: #{$black-100};
+          }
+        }
+
+        &:active {
+          background: #{$white-300};
+
+          .dark-mode & {
+            background: #{$black-200};
+          }
+        }
 
         @include mobile-up {
           padding: 12px;
