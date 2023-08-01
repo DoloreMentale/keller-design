@@ -1,16 +1,16 @@
 <template>
   <div class="footer">
-    <p>
+    <span>
       <span class="footer__text">Designed by </span>
       <span class="footer__text--emphasized">Keller</span>
-    </p>
+    </span>
 
     <div class="footer__divider" />
 
-    <p>
+    <span>
       <span class="footer__text">Developed by </span>
       <span class="footer__text--emphasized">DoloreMentale</span>
-    </p>
+    </span>
   </div>
 </template>
 
@@ -25,6 +25,10 @@
   justify-content: center;
 
   width: 100%;
+
+  font-size: 14px;
+
+  padding: 40px 0;
 
   &__text {
     @include txt-300;

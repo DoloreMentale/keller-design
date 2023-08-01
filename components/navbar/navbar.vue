@@ -59,6 +59,11 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
 
   transition: background 0.3s;
 
+  @include mobile-up {
+    position: relative;
+    padding: 40px 60px;
+  }
+
   .dark-mode & {
     background: #{$black-100};
   }
@@ -100,35 +105,9 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
 
     cursor: pointer;
 
-    :deep(svg) {
-
+    &:not(:last-child) {
+      margin-right: 4px;
     }
   }
-
-  //&__controls {
-  //  display: flex;
-  //  align-items: center;
-  //
-  //  &__theme {
-  //    ::v-deep(svg) {
-  //      cursor: pointer;
-  //
-  //      width: 20px;
-  //      height: 20px;
-  //
-  //      margin: 0 12px;
-  //    }
-  //  }
-
-    //&__lang {
-    //  ::v-deep(svg) {
-    //    cursor: pointer;
-    //
-    //    width: 20px;
-    //    height: 20px;
-    //
-    //    margin-left: 12px;
-    //  }
-    //}
 }
 </style>

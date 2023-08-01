@@ -12,7 +12,8 @@
         'portfolio-list__item__links',
         { 'portfolio-list__item__links--triple': item.links.length > 2 }
     ]">
-      <a
+      <component
+        :is="!!link.link ? 'a' : 'div'"
         v-for="(link, linkIndex) in item.links"
         :key="linkIndex"
         :href="link.link"
@@ -28,7 +29,7 @@
             <p class="portfolio-list__item__links__item__description">{{ $t(link.description) }}</p>
           </div>
         </div>
-      </a>
+      </component>
     </div>
   </div>
 </template>
@@ -52,8 +53,16 @@ const props = defineProps({
     background: #{$white-200};
     transition: background 0.3s;
 
-    &:not(:first-child) {
+    @include mobile-up {
+      padding: 60px 52px;
+    }
+
+    &:not(:first-child):not(:last-child) {
       margin-bottom: 24px;
+
+      @include mobile-up {
+        margin-bottom: 64px;
+      }
     }
 
     &__title {
@@ -91,6 +100,10 @@ const props = defineProps({
       margin: 24px auto;
 
       border-radius: 24px;
+
+      @include mobile-up {
+        margin: 60px auto;
+      }
     }
 
     &__links {
@@ -110,6 +123,17 @@ const props = defineProps({
 
       gap: 24px 16px;
 
+      @include mobile-up {
+        justify-content: space-between;
+        grid-template-columns: repeat(2, 190px);
+        grid-template-rows: auto;
+
+        &--triple {
+          grid-template-areas: "col-3 col-1 col-2";
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
       &__item {
         $self: &;
 
@@ -117,6 +141,9 @@ const props = defineProps({
         align-items: center;
 
         &__wrapper {
+          display: flex;
+          flex-direction: column;
+
           margin-left: 8px;
         }
 
@@ -130,6 +157,10 @@ const props = defineProps({
         background: #{$white-300};
         transition: background 0.3s;
 
+        @include mobile-up {
+          padding: 12px;
+        }
+
         ::v-deep(svg) {
           cursor: pointer;
 
@@ -142,6 +173,7 @@ const props = defineProps({
         &__title {
           @include txt-400;
           font-size: 9px;
+          line-height: normal;
           color: #{$black-100};
 
           margin: 0 0 5px 0;
@@ -154,6 +186,7 @@ const props = defineProps({
         &__description {
           @include txt-600;
           font-size: 12px;
+          line-height: normal;
           color: #{$black-100};
 
           margin: 0;

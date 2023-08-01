@@ -8,7 +8,7 @@
         <slot />
       </div>
 
-      <Footer />
+      <Footer class="layout__footer" />
     </div>
   </div>
 </template>
@@ -19,11 +19,27 @@
   min-height: 100vh;
 
   &__container {
-    padding: 24px;
+    padding: 0 24px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include mobile-up {
+      padding: 0 24px;
+    }
   }
 
   &__content {
-    max-width: 700px;
+    padding-top: 24px;
+
+    @include mobile-up {
+      padding-top: 40px;
+    }
+  }
+
+  &__footer {
+    @include mobile-up {
+      margin-top: 40px;
+    }
   }
 }
 </style>
