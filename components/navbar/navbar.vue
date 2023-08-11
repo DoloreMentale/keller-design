@@ -57,20 +57,18 @@ const switchColorMode = () => colorMode.preference === 'dark' ? colorMode.prefer
   position: sticky;
   top: 0;
 
-  background: #{$white-100};
-
   transition: background 0.3s;
 
   @include mobile-up {
     padding: 40px 60px;
   }
+  
+  @include to-desktop {
+    background: #{$white-100};
 
-  @include desktop-only {
-    position: relative;
-  }
-
-  .dark-mode & {
-    background: #{$black-100};
+    .dark-mode & {
+      background: #{$black-100};
+    }
   }
 
   &__main {
