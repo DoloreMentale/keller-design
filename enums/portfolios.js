@@ -9,6 +9,7 @@ export default [
         title: 'app',
         icon: 'ios',
         description: 'for_ios',
+        link: 'https://apps.apple.com/ru/app/alfabit-wallet/id6447421524'
       },
       {
         title: 'about_company',
