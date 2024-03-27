@@ -1,29 +1,32 @@
 <template>
-  <div class="layout" id="app-layout">
-    <Navbar />
+  <div class="default-layout">
+    <app-header />
 
-    <button type="button" class="layout__arrow-up mobile-up" @click="up()">
+    <button type="button" class="default-layout__arrow-up mobile-up" @click="up()">
       <nuxt-icon name="arrow-up" />
     </button>
 
-    <div class="layout__container">
-      <div class="layout__content">
+    <div class="default-layout__container">
+      <div class="default-layout__content">
         <slot />
       </div>
 
-      <Footer class="layout__footer" />
+      <app-footer class="default-layout__footer" />
     </div>
   </div>
 </template>
 
 <script setup>
+import AppHeader from '~/components/header/app-header.vue';
+import AppFooter from '~/components/app-footer.vue';
+
 const up = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 </script>
 
 <style lang="scss" scoped>
-.layout {
+.default-layout {
   width: 100%;
   min-height: 100vh;
 
@@ -33,10 +36,6 @@ const up = () => {
     padding: 0 24px;
     max-width: 700px;
     margin: 0 auto;
-
-    @include mobile-up {
-      padding: 0 24px;
-    }
   }
 
   &__content {
@@ -48,36 +47,23 @@ const up = () => {
   }
 
   &__footer {
-    @include mobile-up {
-      margin-top: 40px;
-    }
+    margin: 24px 0;
   }
 
   &__arrow-up {
     position: fixed;
     border-radius: 14px;
-    background: #{$white-100};
+    background: var(--c-white-100);
 
     transition: background 0.3s;
 
-    .dark-mode & {
-      background: #{$black-100};
-
-      &:hover, &:active {
-        background: #{$black-200};
-      }
-    }
-
     &:hover {
-      background: #{$white-200};
+      background: var(--c-white-200);
     }
 
     &:active {
-      background: #{$white-300};
-
-      & .nuxt-icon {
-        color: #{$red-200};
-      }
+      background: var(--c-white-300);
+      color: var(--c-red-200);
     }
 
     @include tablet-only {

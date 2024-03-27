@@ -5,27 +5,22 @@ export default defineNuxtConfig({
       crawlLinks: true
     }
   },
-  devtools: { enabled: true },
-  css: ['~/assets/css/main.scss'],
-  buildModules: ['@nuxtjs/google-fonts'],
-  modules: ['@nuxtjs/color-mode', 'nuxt-icons', '@nuxtjs/device', '@nuxtjs/i18n'],
+  devtools: { enabled: false },
+  css: ['~/assets/styles/index.scss'],
+  modules: ['nuxt-icons', '@nuxtjs/device', '@nuxt/image', '@nuxtjs/google-fonts'],
   googleFonts: {
+    preload: true,
     families: {
-      Inter: [400, 500, 600, 700]
+      Inter: [300, 400, 500, 600, 700],
+      Onest: [400, 600, 700]
     }
-  },
-  i18n: {
-    vueI18n: './i18n.config.js'
   },
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: `
-            @use "~/assets/css/mixins/fonts.scss" as *;
-            @use "~/assets/css/mixins/media.scss" as *;
-            @use "~/assets/css/variables/colors.scss" as *;
-            @use "~/assets/css/variables/breakpoints.scss" as *;
+            @use "~/assets/styles/dev/index.scss" as *;
           `
         }
       }

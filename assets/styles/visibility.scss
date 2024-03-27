@@ -1,0 +1,28 @@
+@use 'dev/media' as *;
+
+.mobile-only {
+  @include mobile-up {
+    display: none;
+  }
+}
+
+.mobile-up {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.tablet-only {
+  @include mobile-only{
+    display: none;
+  }
+  @include desktop-only {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @include to-desktop {
+    display: none;
+  }
+}

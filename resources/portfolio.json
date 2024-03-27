@@ -1,0 +1,181 @@
+{
+  "current": [
+    {
+      "id": "ozon",
+
+      "border": "1px solid #FFC684",
+      "background": "#FFF7E3",
+
+      "projects": [
+        {
+          "title": "Победил в конкурсе<br class=\"mobile-only\"> Ozon fintech",
+          "icon": "/portfolio/icons/ozon.svg",
+
+          "company": "Ozon",
+
+          "description": "<b>Задача:</b> спроектировать интерфейс финансового тренера внутри мобильного приложения Ozon Банк, который сформирует программу достижения цели"
+        }
+      ],
+      "links": [
+        {
+          "icon": "socials/telegram",
+          "title": "Telegram",
+          "name": "О конкурсе",
+          "href": "https://google.ru"
+        },
+        {
+          "icon": "figma",
+          "title": "Figma",
+          "name": "Проект с работой",
+          "href": "https://google.ru"
+        }
+      ]
+    },
+    {
+      "id": "paytower",
+      "projects": [
+        {
+          "beforeTitle": "Проектирование MLP",
+          "title": "Криптопроцессинг",
+
+          "company": "PayTower",
+
+          "icon": "/portfolio/icons/paytower.svg",
+
+          "nda": true,
+
+          "subtitle": "Web \\ Разработка бренда",
+          "description": "Совместно спроектировал flow продукта, начиная от стратегического холста и cjm. Заканчивая полным пакетом экранов, со всеми крайними и валидационными сценариями",
+          "image": "/portfolio/paytower.png"
+        }
+      ]
+    }
+  ],
+  "past": [
+    {
+      "id": "alfabit",
+      "projects": [
+        {
+          "beforeTitle": "MVP и развитие продукта",
+          "title": "Некастодиальный криптовалютный кошелек",
+          "icon": "/portfolio/icons/alfabit.svg",
+          "subtitle": "iOS \\ Android \\ Web \\ Telegram game api",
+
+          "company": "AlfaBit",
+
+          "description": "Была решена глобальная задача, привести приложение к виду стандартного и привычного банкинга, адаптированного под массовое использование, не уходя, далеко от устоявшихся решений в сфере криптовалюты",
+          "image": "/portfolio/alfabit_wallet.png"
+        }
+      ],
+      "links": [
+        {
+          "icon": "socials/behance",
+          "title": "Behance",
+          "name": "О проекте",
+          "href": "https://google.ru"
+        },
+        {
+          "icon": "ios",
+          "title": "Приложение",
+          "name": "Для iOS",
+          "href": "https://google.ru"
+        }
+      ]
+    },
+    {
+      "id": "uxacademy",
+
+      "border": "1px solid #FFC684",
+      "background": "#FFF7E3",
+
+      "projects": [
+        {
+          "id": "certificate",
+          "beforeTitle": "Авторский курс<br class=\"mobile-only\"> Ярослава Шуваева",
+          "icon": "/portfolio/icons/uxacademy_cert.png",
+          "secondTitle": "Дизайн Цифровых Продуктов: UX/UI",
+          "iconSize": {
+            "width": 46,
+            "height": 66
+          },
+
+          "company": "Uxacademy.ru",
+
+          "description": "Получен сертификат о прохождении 5 блоков в течении 3х месяцев, по CX/UX/UI"
+        }
+      ]
+    },
+    {
+      "id": "srf",
+      "projects": [
+        {
+          "beforeTitle": "MVP и развитие продукта",
+          "title": "Портал Ассоциации развития  фигурного катания",
+          "icon": "/portfolio/icons/srf.svg",
+
+          "company": "Smart TS",
+
+          "description": "Был спроектирован портал, который послужил единой площадкой для тысяч спортсменов и оргназиаций, в сфере любительского фигурного катания.<br>Основной задачей было решить проблему отсутствия единого механизма для проведения соревнований. А так же создать легкий доступ людей к данному виду спорта",
+
+          "image": "/portfolio/srf.png"
+        }
+      ],
+      "links": [
+        {
+          "icon": "socials/behance",
+          "title": "Behance",
+          "name": "О проекте",
+          "href": "https://google.ru"
+        },
+        {
+          "icon": "ios",
+          "title": "Перейти на сайт",
+          "name": "Соревнования.рф",
+          "href": "https://соревнования.рф"
+        }
+      ]
+    },
+    {
+      "id": "reborn",
+      "projects": [
+        {
+          "id": "reborn-main",
+          "beforeTitle": "Редизайн и развитие продукта",
+          "title": "Портал крупнейшего проекта в европе<br>по MMO Lineage 2",
+          "icon": "/portfolio/icons/reborn.svg",
+          "subtitle": "Web \\ Mobile \\ Разработка бренда",
+
+          "company": "Reborn",
+
+          "description": "Основной задачей было решение проблемы масштабирования проекта, с которым старый дизайн уже не справлялся. А так же необходимость создать на своей платформе многофункциональный личный кабинет, облегчающий взаимодействие пользователя с игровым клиентом",
+          "image": "/portfolio/reborn.png"
+        },
+        {
+          "id": "reborn-wiki",
+          "beforeTitle": "Проектирование MLP",
+          "title": "База знаний по MMO Lineage 2",
+          "subtitle": "Web",
+
+          "company": "Reborn",
+
+          "description": "Стояла задача создать базу знаний, обьединяющую десятки разрозненных, неполных и сложных в использовании баз, которыми пользователи пользовались ранее.\nВ комьюнити остро стояла проблема, которая решалась данным проектом впервую очередь - противоречивость данных от базы к базе, так же их неполнота и большой объем лишних данных, что затрудняло любую работу с информацией.",
+          "image": "/portfolio/reborn_wiki.png"
+        }
+      ],
+      "links": [
+        {
+          "icon": "socials/reborn",
+          "title": "Сайт базы знаний",
+          "name": "lineage2wiki.com",
+          "href": "https://google.ru"
+        },
+        {
+          "icon": "socials/reborn",
+          "title": "Сайт проекта",
+          "name": "l2reborn.org",
+          "href": "https://l2reborn.org"
+        }
+      ]
+    }
+  ]
+}

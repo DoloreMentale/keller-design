@@ -1,0 +1,17 @@
+@use './dev/colors' as *;
+
+:root {
+  --c-white-100: #{$c-white-100};
+  --c-white-200: #{$c-white-200};
+  --c-white-300: #{$c-white-300};
+  --c-white-400: #{$c-white-400};
+  --c-white-500: #{$c-white-500};
+
+  --c-black-100: #{$c-black-100};
+  --c-black-200: #{$c-black-200};
+
+  --c-red-100: #{$c-red-100};
+  --c-red-200: #{$c-red-200};
+}
+
+

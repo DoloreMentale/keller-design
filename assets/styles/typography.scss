@@ -1,0 +1,5 @@
+@use './dev/typography' as *;
+
+body {
+  @include primary-font;
+}
