@@ -10,7 +10,7 @@
     <div class="app-footer__executive">
       Developed by
       <a
-        href="tg://resolve?domain=@ivan_grachyov_774"
+        href="https://t.me/ivan_grachyov_774"
         target="_blank"
         class="app-footer__person"
       >
@@ -34,6 +34,16 @@
     margin-bottom: 8px;
   }
 
+  @include desktop-only {
+    flex-direction: row;
+    justify-content: center;
+
+    & > *:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 24px;
+    }
+  }
+
   &__executive {
     @include txt-r-t;
     color: var(--c-white-500);
@@ -49,6 +59,11 @@
     width: 14px;
     height: 1px;
     background: var(--c-white-500);
+
+    @include desktop-only {
+      width: 1px;
+      height: 14px;
+    }
   }
 }
 </style>

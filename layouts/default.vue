@@ -36,6 +36,10 @@ const up = () => {
     padding: 0 24px;
     max-width: 700px;
     margin: 0 auto;
+
+    @include desktop-only {
+      padding: 0;
+    }
   }
 
   &__content {
@@ -48,6 +52,10 @@ const up = () => {
 
   &__footer {
     margin: 24px 0;
+
+    @include desktop-only {
+      margin: 40px 0;
+    }
   }
 
   &__arrow-up {

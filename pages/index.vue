@@ -5,7 +5,7 @@
     </Head>
 
     <profile-description />
-    <profile-portfolio />
+    <profile-portfolio class="index-page__portfolio" />
   </div>
 </template>
 
@@ -16,6 +16,12 @@ import ProfilePortfolio from '~/components/portfolio/profile-portfolio.vue';
 
 <style scoped lang="scss">
 .index-page {
+  &__portfolio {
+    margin-top: 24px;
 
+    @include desktop-only {
+      margin-top: 40px;
+    }
+  }
 }
 </style>

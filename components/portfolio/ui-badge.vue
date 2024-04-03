@@ -26,6 +26,10 @@ defineProps({
 
   white-space: nowrap;
 
+  @include desktop-only {
+    @include txt-t-b;
+  }
+
   &--nda {
     background: var(--c-red-100);
   }

@@ -1,0 +1,47 @@
+$margins: (4, 8, 12, 16, 20);
+
+@each $margin in $margins {
+  .mt-#{$margin} {
+    margin-top: #{$margin}px;
+  }
+
+  .mb-#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+
+  .ml-#{$margin} {
+    margin-left: #{$margin}px;
+  }
+
+  .mr-#{$margin} {
+    margin-right: #{$margin}px;
+  }
+
+  .my-#{$margin} {
+    margin: #{$margin}px 0;
+  }
+
+  .mx-#{$margin} {
+    margin: 0 #{$margin}px;
+  }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}

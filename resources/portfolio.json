@@ -2,32 +2,33 @@
   "current": [
     {
       "id": "ozon",
-
-      "border": "1px solid #FFC684",
-      "background": "#FFF7E3",
+      "type": "highlighted",
 
       "projects": [
         {
-          "title": "Победил в конкурсе<br class=\"mobile-only\"> Ozon fintech",
+          "title": "<img class=\"desktop-only\" src=\"/crown.svg\"> Победил в конкурсе<br class=\"mobile-only\"> Ozon fintech",
           "icon": "/portfolio/icons/ozon.svg",
 
           "company": "Ozon",
 
-          "description": "<b>Задача:</b> спроектировать интерфейс финансового тренера внутри мобильного приложения Ozon Банк, который сформирует программу достижения цели"
-        }
-      ],
-      "links": [
-        {
-          "icon": "socials/telegram",
-          "title": "Telegram",
-          "name": "О конкурсе",
-          "href": "https://google.ru"
-        },
-        {
-          "icon": "figma",
-          "title": "Figma",
-          "name": "Проект с работой",
-          "href": "https://google.ru"
+          "description": "<b>Задача:</b> спроектировать интерфейс финансового тренера внутри мобильного приложения Ozon Банк, который сформирует программу достижения цели",
+
+          "links": [
+            {
+              "icon": "socials/telegram",
+              "title": "Telegram",
+              "name": "О конкурсе",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "figma",
+              "title": "Figma",
+              "name": "Проект с работой",
+              "href": "https://google.ru",
+              "disabled": true
+            }
+          ]
         }
       ]
     },
@@ -64,36 +65,37 @@
           "company": "AlfaBit",
 
           "description": "Была решена глобальная задача, привести приложение к виду стандартного и привычного банкинга, адаптированного под массовое использование, не уходя, далеко от устоявшихся решений в сфере криптовалюты",
-          "image": "/portfolio/alfabit_wallet.png"
-        }
-      ],
-      "links": [
-        {
-          "icon": "socials/behance",
-          "title": "Behance",
-          "name": "О проекте",
-          "href": "https://google.ru"
-        },
-        {
-          "icon": "ios",
-          "title": "Приложение",
-          "name": "Для iOS",
-          "href": "https://google.ru"
+          "image": "/portfolio/alfabit_wallet.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "О проекте",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "ios",
+              "title": "Приложение",
+              "name": "Для iOS",
+              "href": "https://google.ru",
+              "disabled": true
+            }
+          ]
         }
       ]
     },
     {
       "id": "uxacademy",
-
-      "border": "1px solid #FFC684",
-      "background": "#FFF7E3",
+      "type": "highlighted",
 
       "projects": [
         {
           "id": "certificate",
-          "beforeTitle": "Авторский курс<br class=\"mobile-only\"> Ярослава Шуваева",
+          "beforeTitle": "Авторский курс Ярослава <br class=\"mobile-only\"> Шуваева",
           "icon": "/portfolio/icons/uxacademy_cert.png",
-          "secondTitle": "Дизайн Цифровых Продуктов: UX/UI",
+          "title": "Дизайн Цифровых Продуктов: UX/UI",
           "iconSize": {
             "width": 46,
             "height": 66
@@ -117,21 +119,25 @@
 
           "description": "Был спроектирован портал, который послужил единой площадкой для тысяч спортсменов и оргназиаций, в сфере любительского фигурного катания.<br>Основной задачей было решить проблему отсутствия единого механизма для проведения соревнований. А так же создать легкий доступ людей к данному виду спорта",
 
-          "image": "/portfolio/srf.png"
-        }
-      ],
-      "links": [
-        {
-          "icon": "socials/behance",
-          "title": "Behance",
-          "name": "О проекте",
-          "href": "https://google.ru"
-        },
-        {
-          "icon": "ios",
-          "title": "Перейти на сайт",
-          "name": "Соревнования.рф",
-          "href": "https://соревнования.рф"
+          "image": "/portfolio/srf.png",
+
+          "subtitle": "Web \\ Mobile",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "О проекте",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "ios",
+              "title": "Перейти на сайт",
+              "name": "Соревнования.рф",
+              "href": "https://соревнования.рф"
+            }
+          ]
         }
       ]
     },
@@ -148,32 +154,51 @@
           "company": "Reborn",
 
           "description": "Основной задачей было решение проблемы масштабирования проекта, с которым старый дизайн уже не справлялся. А так же необходимость создать на своей платформе многофункциональный личный кабинет, облегчающий взаимодействие пользователя с игровым клиентом",
-          "image": "/portfolio/reborn.png"
+          "image": "/portfolio/reborn.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "О проекте",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "socials/reborn",
+              "title": "Сайт проекта",
+              "name": "l2reborn.org",
+              "href": "https://l2reborn.org"
+            }
+          ]
         },
         {
           "id": "reborn-wiki",
           "beforeTitle": "Проектирование MLP",
           "title": "База знаний по MMO Lineage 2",
+          "icon": "/portfolio/icons/reborn.svg",
           "subtitle": "Web",
 
           "company": "Reborn",
 
           "description": "Стояла задача создать базу знаний, обьединяющую десятки разрозненных, неполных и сложных в использовании баз, которыми пользователи пользовались ранее.\nВ комьюнити остро стояла проблема, которая решалась данным проектом впервую очередь - противоречивость данных от базы к базе, так же их неполнота и большой объем лишних данных, что затрудняло любую работу с информацией.",
-          "image": "/portfolio/reborn_wiki.png"
-        }
-      ],
-      "links": [
-        {
-          "icon": "socials/reborn",
-          "title": "Сайт базы знаний",
-          "name": "lineage2wiki.com",
-          "href": "https://google.ru"
-        },
-        {
-          "icon": "socials/reborn",
-          "title": "Сайт проекта",
-          "name": "l2reborn.org",
-          "href": "https://l2reborn.org"
+          "image": "/portfolio/reborn_wiki.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "О проекте",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "socials/l2_wiki",
+              "title": "Сайт базы знаний",
+              "name": "lineage2wiki.com/",
+              "href": "https://lineage2wiki.com"
+            }
+          ]
         }
       ]
     }

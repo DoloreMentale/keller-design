@@ -22,7 +22,7 @@ import AppLogo from './app-logo.vue';
           <nuxt-icon name="socials/behance" />
         </a>
 
-        <a href="https://www.behance.net/Kellerpro" class="app-header__cv" target="_blank">
+        <a href="#" class="app-header__cv" target="_blank">
           <nuxt-icon name="download" />
           Скачать CV
         </a>
@@ -48,8 +48,9 @@ import AppLogo from './app-logo.vue';
   position: sticky;
   top: 0;
 
-  @include mobile-up {
-    padding: 40px 60px;
+  @include desktop-only {
+    padding: 48px 60px 0;
+    height: 104px;
   }
 
   @include to-desktop {
@@ -70,6 +71,10 @@ import AppLogo from './app-logo.vue';
       margin: 0 auto;
 
       background-color: var(--c-white-500);
+
+      @include mobile-up {
+        margin: 0 24px;
+      }
     }
   }
 
@@ -80,6 +85,11 @@ import AppLogo from './app-logo.vue';
     align-items: center;
 
     margin-left: 16px;
+
+    @include mobile-up {
+      width: auto;
+      margin-left: auto;
+    }
   }
 
   &__control {
@@ -95,6 +105,8 @@ import AppLogo from './app-logo.vue';
     cursor: pointer;
 
     color: var(--c-black-100);
+
+    @include btn-transition;
 
     &:hover {
       color: var(--c-red-200);
@@ -118,6 +130,8 @@ import AppLogo from './app-logo.vue';
     margin-left: auto;
     margin-right: 6px;
 
+    @include btn-transition;
+
     &:hover {
       background: var(--c-red-100);
     }
@@ -131,9 +145,18 @@ import AppLogo from './app-logo.vue';
     .nuxt-icon {
       margin-right: 4px;
 
-      @include desktop-only {
+      @include mobile-up {
         margin-right: 8px;
       }
+    }
+
+    @include desktop-only {
+      margin-left: 24px;
+      margin-right: 0;
+
+      padding: 12px 24px;
+
+      @include txt-l-sb;
     }
   }
 }

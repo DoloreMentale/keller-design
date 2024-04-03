@@ -29,11 +29,25 @@ import { current, past } from '~/resources/portfolio.json'
     margin: 24px auto;
     text-align: center;
     color: var(--c-white-500);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include desktop-only {
+      margin: 40px auto;
+
+      @include txt-l;
+    }
   }
 
   &__items {
     & > *:not(:last-child) {
       margin-bottom: 24px;
+
+      @include desktop-only {
+        margin-bottom: 40px;
+      }
     }
   }
 }

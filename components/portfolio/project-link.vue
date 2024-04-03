@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" class="project-link" target="_blank">
+  <component :is="tag" :href="link" :class="['project-link', { 'is-disabled': disabled }]" target="_blank">
     <nuxt-icon class="project-link__icon" :name="icon" />
     <div class="project-link__wrapper">
       <span class="project-link__title">
@@ -9,11 +9,11 @@
         {{ name }}
       </span>
     </div>
-  </a>
+  </component>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   link: {
     type: String,
     default: ''
@@ -29,8 +29,14 @@ defineProps({
   name: {
     type: String,
     default: ''
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
 })
+
+const tag = computed(() => props.disabled ? 'div' : 'a')
 </script>
 
 <style lang="scss" scoped>
@@ -45,12 +51,16 @@ defineProps({
 
   color: var(--c-black-100);
 
-  &:hover {
-    background: var(--c-white-200);
-  }
+  @include btn-transition;
 
-  &:active {
-    background: var(--c-white-300);
+  &:not(.is-disabled) {
+    &:hover {
+      background: var(--c-white-300);
+    }
+
+    &:active {
+      background: var(--c-white-200);
+    }
   }
 
   &__icon {
@@ -74,6 +84,11 @@ defineProps({
     font-size: 12px;
     line-height: 20px;
     font-weight: 600;
+  }
+
+  &.is-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
   }
 }
 </style>
