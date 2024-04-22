@@ -22,7 +22,7 @@ import AppLogo from './app-logo.vue';
           <nuxt-icon name="socials/behance" />
         </a>
 
-        <a href="#" download="tomkeller.pdf" class="app-header__cv" target="_blank">
+        <a href="/keller.pdf" download="keller.pdf" class="app-header__cv" target="_blank">
           <nuxt-icon name="download" />
           Скачать CV
         </a>
