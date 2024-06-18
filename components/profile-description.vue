@@ -7,9 +7,9 @@
     <h2 class="profile-description__subtitle">Senior product designer</h2>
 
     <p class="profile-description__summary">
-      Занимаюсь дизайном 11 лет
+      Занимаюсь дизайном 12 лет
       <br class="mobile-only">
-      из них 4 года в продуктологии.
+      из них последние 5 лет в продуктологии.
       <br>
       Специализируюсь на финтех / <br class="mobile-only"> криптовалютных решениях
     </p>
