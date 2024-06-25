@@ -1,0 +1,203 @@
+{
+  "current": [
+    {
+      "id": "ozon",
+      "type": "highlighted",
+
+      "projects": [
+        {
+          "title": "<img class=\"desktop-only\" src=\"/crown.svg\"> Won the<br class=\"mobile-only\"> Ozon fintech competition",
+          "icon": "/portfolio/icons/ozon.svg",
+
+          "company": "Ozon",
+
+          "description": "<b>Task:</b> to design the interface for a financial training module within the Ozon Bank mobile application that will form part of a program designed to achieve a specific goal",
+
+          "links": [
+            {
+              "icon": "socials/telegram",
+              "title": "Telegram",
+              "name": "About the competition",
+              "href": "https://t.me/bbeuxui/727"
+            },
+            {
+              "icon": "figma",
+              "title": "Figma",
+              "name": "Project",
+              "href": "https://www.figma.com/file/5eQTDudr0LwvPKl0gDs37c/Ozon-Fintech?type=design&node-id=0%3A1&mode=design&t=pPCq5rG1VR4NY8Qf-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paytower",
+      "projects": [
+        {
+          "beforeTitle": "Create MLP",
+          "title": "PSP Cryptoprocessing",
+
+          "company": "PayTower",
+
+          "icon": "/portfolio/icons/paytower.svg",
+
+          "nda": true,
+
+          "subtitle": "Web \\ Branding",
+          "description": "I was jointly responsible for designing the product flow, starting with the CJM and finishing with a complete set of screens, including all extreme and validation scenarios",
+          "image": "/portfolio/paytower.png"
+        }
+      ]
+    }
+  ],
+  "past": [
+    {
+      "id": "alfabit",
+      "projects": [
+        {
+          "beforeTitle": "Create MVP and product development",
+          "title": "Non-custodial crypto wallet",
+          "icon": "/portfolio/icons/alfabit.svg",
+          "subtitle": "iOS \\ Android \\ Web \\ Telegram game api",
+
+          "company": "AlfaBit",
+
+          "description": "A global task has been solved, to bring the application to the form of standard and familiar banking, adapted for mass use",
+          "image": "/portfolio/alfabit_wallet.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "About project",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "ios",
+              "title": "App",
+              "name": "iOS",
+              "href": "https://apps.apple.com/ru/app/alfabit-wallet/id6447421524"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uxacademy",
+      "type": "highlighted",
+
+      "projects": [
+        {
+          "id": "certificate",
+          "beforeTitle": "Author's course Yaroslav <br class=\"mobile-only\"> Shuvaev",
+          "icon": "/portfolio/icons/uxacademy_cert.png",
+          "title": "Digital Product Design: UX/UI",
+          "iconSize": {
+            "width": 46,
+            "height": 66
+          },
+
+          "company": "Uxacademy.ru",
+
+          "description": "Received a certificate for completing the study of all major\nUX/UI/CX frameworks"
+        }
+      ]
+    },
+    {
+      "id": "srf",
+      "projects": [
+        {
+          "beforeTitle": "Create MVP and product development",
+          "title": "Figure Skating Association Platform",
+          "icon": "/portfolio/icons/srf.svg",
+
+          "company": "Smart TS",
+
+          "description": "A portal has been developed that serves as a unified platform for thousands of amateur figure skaters and organizations. The primary objective was to address the issue of the absence of a unified mechanism for organizing competitions, as well as to facilitate easy access to this sport for the general public",
+
+          "image": "/portfolio/srf.png",
+
+          "subtitle": "Web \\ Mobile",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "About project",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "srf",
+              "title": "Website",
+              "name": "Соревнования.рф",
+              "href": "https://соревнования.рф"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reborn",
+      "projects": [
+        {
+          "id": "reborn-main",
+          "beforeTitle": "Redesign and product development",
+          "title": "The largest platform in Europe for the MMO<br> game Lineage 2",
+          "icon": "/portfolio/icons/reborn.svg",
+          "subtitle": "Web \\ Mobile \\ Branding",
+
+          "company": "Reborn",
+
+          "description": "The main task was to solve the problem of scaling the project, which the old design could no longer cope with. As well as the need to create a multifunctional personal account on its platform, which facilitates user interaction with the gaming client",
+          "image": "/portfolio/reborn.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "About project",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "socials/reborn",
+              "title": "Website",
+              "name": "l2reborn.org",
+              "href": "https://l2reborn.org"
+            }
+          ]
+        },
+        {
+          "id": "reborn-wiki",
+          "beforeTitle": "Create MLP",
+          "title": "Wikipedia MMO Lineage 2",
+          "icon": "/portfolio/icons/reborn.svg",
+          "subtitle": "Web",
+
+          "company": "Reborn",
+
+          "description": "The task was to create a knowledge base combining dozens of disparate, incomplete and difficult-to-use databases that users had previously used.\n\nThere was an acute problem in the community, which was solved by this project in the first place - the inconsistency of data from database to database, as well as their incompleteness and a large amount of unnecessary data, which made any work with information difficult",
+          "image": "/portfolio/reborn_wiki.png",
+
+          "links": [
+            {
+              "icon": "socials/behance",
+              "title": "Behance",
+              "name": "About project",
+              "href": "https://google.ru",
+              "disabled": true
+            },
+            {
+              "icon": "socials/l2_wiki",
+              "title": "Website",
+              "name": "lineage2wiki.com/",
+              "href": "https://lineage2wiki.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

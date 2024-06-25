@@ -1,0 +1,13 @@
+{
+  "header": {
+    "cv": "Скачать CV"
+  },
+  "profile": {
+    "name": "Антон Савченко",
+    "role": "Senior product designer",
+    "description": "Занимаюсь дизайном 12 лет <br class=\"mobile-only\"> из них последние 5 лет в продуктологии.<br>Специализируюсь на финтех / <br class=\"mobile-only\"> криптовалютных решениях"
+  },
+  "select-language": "Выбрать язык",
+  "at_the_moment": "В настоящее время",
+  "before": "Раньше"
+}

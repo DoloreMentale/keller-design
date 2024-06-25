@@ -54,6 +54,12 @@
   font-weight: 500;
 }
 
+@mixin txt-s-m {
+  font-size: 12px;
+  line-height: 17.8px;
+  font-weight: 500;
+}
+
 @mixin txt-s {
   font-size: 12px;
   line-height: 15px;
@@ -124,4 +130,10 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
+}
+
+@mixin txt-h-b {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.2px;
 }

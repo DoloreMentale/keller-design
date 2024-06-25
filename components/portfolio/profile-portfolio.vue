@@ -1,25 +1,32 @@
 <template>
   <div class="profile-portfolio">
     <p class="profile-portfolio__subtitle">
-      В настоящее время
+      {{ $t('at_the_moment') }}
     </p>
 
     <div class="profile-portfolio__items">
-      <portfolio-item v-for="item in current" :key="item.id" :item="item" />
+      <portfolio-item v-for="item in portfolio.current" :key="item.id" :item="item" />
     </div>
 
     <p class="profile-portfolio__subtitle">
-      Раньше
+      {{ $t('before') }}
     </p>
 
     <div class="profile-portfolio__items">
-      <portfolio-item v-for="item in past" :key="item.id" :item="item" />
+      <portfolio-item v-for="item in portfolio.past" :key="item.id" :item="item" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { current, past } from '~/resources/portfolio.json'
+import portfolioRU from '~/resources/portfolio_ru.json'
+import portfolioEN from '~/resources/portfolio_en.json'
+
+const i18n = useI18n()
+
+const { locale } = i18n
+
+const portfolio = computed(() => locale.value === 'eng' ? portfolioEN : portfolioRU)
 </script>
 
 <style lang="scss" scoped>

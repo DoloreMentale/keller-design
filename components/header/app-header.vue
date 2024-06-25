@@ -1,35 +1,40 @@
-<script setup>
-import AppLogo from './app-logo.vue';
-</script>
-
 <template>
   <header class="app-header">
     <div class="app-header__main">
-      <app-logo />
-
-      <div class="app-header__actions">
-        <a href="https://vk.com/tomkeller" class="app-header__control" target="_blank">
-          <nuxt-icon name="socials/vk" />
-        </a>
-
-        <a href="https://t.me/AntonKeller" class="app-header__control" target="_blank">
-          <nuxt-icon name="socials/telegram" />
-        </a>
-
-        <div class="app-header__main_divider" />
-
+      <div class="app-header__links">
         <a href="https://www.behance.net/Kellerpro" class="app-header__control" target="_blank">
           <nuxt-icon name="socials/behance" />
         </a>
+        <a href="https://vk.com/tomkeller" class="app-header__control" target="_blank">
+          <nuxt-icon name="socials/vk" />
+        </a>
+        <a href="https://t.me/AntonKeller" class="app-header__control" target="_blank">
+          <nuxt-icon name="socials/telegram" />
+        </a>
+      </div>
 
-        <a href="/keller.pdf" download="keller.pdf" class="app-header__cv" target="_blank">
+      <div class="app-header__actions">
+        <lang-switcher />
+
+        <a :href="cvLink" :download="cvName" class="app-header__cv" target="_blank">
           <nuxt-icon name="download" />
-          Скачать CV
+          {{ $t('header.cv') }}
         </a>
       </div>
     </div>
   </header>
 </template>
+
+<script setup>
+import LangSwitcher from './lang-switcher.vue'
+
+const i18n = useI18n()
+
+const { locale } = i18n
+
+const cvLink = computed(() => locale.value === 'eng' ? '/keller_en.pdf' : '/keller_ru.pdf')
+const cvName = computed(() => locale.value === 'eng' ? 'keller_en.pdf' : 'keller_ru.pdf')
+</script>
 
 <style lang="scss" scoped>
 .app-header {
@@ -55,6 +60,11 @@ import AppLogo from './app-logo.vue';
 
   @include to-desktop {
     background: var(--c-white-100);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
   }
 
   &__main {
@@ -83,6 +93,7 @@ import AppLogo from './app-logo.vue';
 
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 
     margin-left: 16px;
 
@@ -127,7 +138,7 @@ import AppLogo from './app-logo.vue';
     color: var(--c-white-100);
     border-radius: 12px;
 
-    margin-left: auto;
+    margin-left: 8px;
     margin-right: 6px;
 
     @include btn-transition;

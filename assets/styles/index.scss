@@ -48,3 +48,24 @@ picture,
 video {
   max-width: 100%;
 }
+
+.bottom-sheet {
+  @include desktop-only {
+    display: none !important;
+  }
+
+  &__content {
+    border-radius: 12px 12px 0 0 !important;
+  }
+
+  &__draggable-area {
+    padding: 8px 0 16px !important;
+  }
+
+  &__draggable-thumb {
+    width: 57px !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+    background: var(--c-white-400) !important;
+  }
+}

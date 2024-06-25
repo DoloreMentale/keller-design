@@ -2,17 +2,11 @@
   <div class="profile-description">
     <nuxt-img src="/profile-pic.png" class="profile-description__img" width="84" height="84" preload />
 
-    <h1 class="profile-description__title">Антон Келлер</h1>
+    <h1 class="profile-description__title">{{ $t('profile.name') }}</h1>
 
-    <h2 class="profile-description__subtitle">Senior product designer</h2>
+    <h2 class="profile-description__subtitle">{{ $t('profile.role') }}</h2>
 
-    <p class="profile-description__summary">
-      Занимаюсь дизайном 12 лет
-      <br class="mobile-only">
-      из них последние 5 лет в продуктологии.
-      <br>
-      Специализируюсь на финтех / <br class="mobile-only"> криптовалютных решениях
-    </p>
+    <p class="profile-description__summary" v-html="$t('profile.description')" />
   </div>
 </template>
 
@@ -36,6 +30,7 @@
     @include h1;
     color: var(--c-black-100);
     margin-bottom: 16px;
+    white-space: pre;
   }
 
   &__subtitle {

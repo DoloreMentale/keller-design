@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   css: ['~/assets/styles/index.scss'],
-  modules: ['nuxt-icons', '@nuxtjs/device', '@nuxt/image', '@nuxtjs/google-fonts'],
+  modules: ['nuxt-icons', '@nuxtjs/device', '@nuxt/image', '@nuxtjs/google-fonts', '@nuxtjs/i18n'],
   googleFonts: {
     preload: true,
     families: {
@@ -25,5 +25,27 @@ export default defineNuxtConfig({
         }
       }
     }
+  },
+  i18n: {
+    defaultLocale: 'eng',
+    langDir: './resources/lang',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n',
+      redirectOn: 'root'
+    },
+    compilation: {
+      strictMessage: false
+    },
+    locales: [
+      {
+        code: 'ru',
+        file: 'ru.json'
+      },
+      {
+        code: 'eng',
+        file: 'en.json'
+      }
+    ]
   }
 });
