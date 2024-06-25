@@ -161,6 +161,10 @@ const type = inject('type')
     @include txt-l;
     margin-top: 16px;
     color: var(--c-white-500);
+
+    @include desktop-only {
+      margin-top: 10px;
+    }
   }
 }
 </style>
