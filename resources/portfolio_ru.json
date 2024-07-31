@@ -137,67 +137,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "reborn",
-      "projects": [
-        {
-          "id": "reborn-main",
-          "beforeTitle": "Редизайн и развитие продукта",
-          "title": "Портал крупнейшего проекта в европе<br>по MMO Lineage 2",
-          "icon": "/portfolio/icons/reborn.svg",
-          "subtitle": "Web \\ Mobile \\ Разработка бренда",
-
-          "company": "Reborn",
-
-          "description": "Основной задачей было решение проблемы масштабирования проекта, с которым старый дизайн уже не справлялся. А так же необходимость создать на своей платформе многофункциональный личный кабинет, облегчающий взаимодействие пользователя с игровым клиентом",
-          "image": "/portfolio/reborn.png",
-
-          "links": [
-            {
-              "icon": "socials/behance",
-              "title": "Behance",
-              "name": "О проекте",
-              "href": "https://google.ru",
-              "disabled": true
-            },
-            {
-              "icon": "socials/reborn",
-              "title": "Сайт проекта",
-              "name": "l2reborn.org",
-              "href": "https://l2reborn.org"
-            }
-          ]
-        },
-        {
-          "id": "reborn-wiki",
-          "beforeTitle": "Проектирование MLP",
-          "title": "База знаний по MMO Lineage 2",
-          "icon": "/portfolio/icons/reborn.svg",
-          "subtitle": "Web",
-
-          "company": "Reborn",
-
-          "description": "Стояла задача создать базу знаний, обьединяющую десятки разрозненных, неполных и сложных в использовании баз, которыми пользователи пользовались ранее.\nВ комьюнити остро стояла проблема, которая решалась данным проектом впервую очередь - противоречивость данных от базы к базе, так же их неполнота и большой объем лишних данных, что затрудняло любую работу с информацией.",
-          "image": "/portfolio/reborn_wiki.png",
-
-          "links": [
-            {
-              "icon": "socials/behance",
-              "title": "Behance",
-              "name": "О проекте",
-              "href": "https://google.ru",
-              "disabled": true
-            },
-            {
-              "icon": "socials/l2_wiki",
-              "title": "Сайт базы знаний",
-              "name": "lineage2wiki.com",
-              "href": "https://lineage2wiki.com"
-            }
-          ]
-        }
-      ]
     }
   ]
 }

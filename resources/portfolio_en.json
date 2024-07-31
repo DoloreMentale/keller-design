@@ -137,67 +137,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "reborn",
-      "projects": [
-        {
-          "id": "reborn-main",
-          "beforeTitle": "Redesign and product development",
-          "title": "The largest platform in Europe for the MMO<br> game Lineage 2",
-          "icon": "/portfolio/icons/reborn.svg",
-          "subtitle": "Web \\ Mobile \\ Branding",
-
-          "company": "Reborn",
-
-          "description": "The main task was to solve the problem of scaling the project, which the old design could no longer cope with. As well as the need to create a multifunctional personal account on its platform, which facilitates user interaction with the gaming client",
-          "image": "/portfolio/reborn.png",
-
-          "links": [
-            {
-              "icon": "socials/behance",
-              "title": "Behance",
-              "name": "About project",
-              "href": "https://google.ru",
-              "disabled": true
-            },
-            {
-              "icon": "socials/reborn",
-              "title": "Website",
-              "name": "l2reborn.org",
-              "href": "https://l2reborn.org"
-            }
-          ]
-        },
-        {
-          "id": "reborn-wiki",
-          "beforeTitle": "Create MLP",
-          "title": "Wikipedia MMO Lineage 2",
-          "icon": "/portfolio/icons/reborn.svg",
-          "subtitle": "Web",
-
-          "company": "Reborn",
-
-          "description": "The task was to create a knowledge base combining dozens of disparate, incomplete and difficult-to-use databases that users had previously used.\n\nThere was an acute problem in the community, which was solved by this project in the first place - the inconsistency of data from database to database, as well as their incompleteness and a large amount of unnecessary data, which made any work with information difficult",
-          "image": "/portfolio/reborn_wiki.png",
-
-          "links": [
-            {
-              "icon": "socials/behance",
-              "title": "Behance",
-              "name": "About project",
-              "href": "https://google.ru",
-              "disabled": true
-            },
-            {
-              "icon": "socials/l2_wiki",
-              "title": "Website",
-              "name": "lineage2wiki.com",
-              "href": "https://lineage2wiki.com"
-            }
-          ]
-        }
-      ]
     }
   ]
 }
